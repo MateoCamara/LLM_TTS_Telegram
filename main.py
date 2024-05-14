@@ -7,8 +7,7 @@ from dotenv import load_dotenv
 
 from utils import get_tts_args
 
-dir_path = os.path.abspath('OpenVoice')
-sys.path.append(dir_path)
+
 
 from langchain_community.llms import Ollama
 
@@ -28,7 +27,7 @@ ALLOWED_USER_ID = os.getenv('ALLOWED_USER_ID')
 
 def setup_llm():
     # We need to instantiate the LLM model.
-    llm = Ollama(model="gemma", device=device)
+    llm = Ollama(model="gemma")
 
     return llm
 

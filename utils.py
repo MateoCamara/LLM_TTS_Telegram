@@ -1,4 +1,10 @@
+import os
+import sys
+
 import torch
+
+dir_path = os.path.abspath('OpenVoice')
+sys.path.append(dir_path)
 
 from OpenVoice.openvoice import se_extractor
 from OpenVoice.openvoice.api import ToneColorConverter
